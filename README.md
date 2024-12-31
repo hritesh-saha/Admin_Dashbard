@@ -60,3 +60,5 @@ This will read the PDF file starting from page 23 and convert it to audio.
 >   - ***Recommendation:*** For longer PDFs, it is advisable to break down the conversion process by converting smaller portions (e.g., process 10 pages at a time).
 >
 > - ***PDF Formatting:*** The script relies on extracting plain text from the PDF, so PDFs with complex layouts, images, or scanned pages may not extract cleanly. Text-heavy PDFs will provide the best results.
+
+<p align="center"><a href="https://github.com/hritesh-saha/Audex/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=BSD-3-Clause&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
