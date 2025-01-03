@@ -35,10 +35,15 @@ try:
                 print(f"Warning: Page {page_num + 1} has no extractable text.")
 
         if full_text:
+            file_number = 1
+            while os.path.exists(f"output{file_number}.mp3"):
+                file_number += 1
+            output_filename = f"output{file_number}.mp3"
+            
             # Use gTTS (Google Text-to-Speech) to convert the text to speech
             tts = gTTS(text=full_text, lang='en')
-            tts.save("output.mp3")  # Save the speech as an MP3 file
-            print("MP3 file has been saved as 'output.mp3'.")
+            tts.save(output_filename)  # Save the speech as an MP3 file
+            print(f"MP3 file has been saved as '{output_filename}'.")
         else:
             print("No text extracted from the PDF to convert to speech.")
 
