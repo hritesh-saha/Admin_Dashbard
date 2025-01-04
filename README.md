@@ -28,7 +28,7 @@ pip install gtts PyPDF2
 First, clone or download the repository to your local machine.
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/hritesh-saha/Audex.git
 ```
 navigate into the clone directory `Audex`
 ```bash
