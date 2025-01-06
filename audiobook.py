@@ -5,11 +5,15 @@ from gtts import gTTS
 import PyPDF2
 
 if len(sys.argv) < 3:
-    print("Usage: python audiobook.py <relative_file_path> <starting_page_number>")
+    print("Usage: python audiobook.py <relative_file_path> <starting_page_number> <ending_page_number>(optional)")
     sys.exit(1)
 
 file_path = sys.argv[1]
 start_page = int(sys.argv[2]) - 1
+end_page = None
+
+if len(sys.argv) > 3:
+    end_page = int(sys.argv[3]) - 1
 
 if not os.path.isfile(file_path):
     print(f"Error: The file '{file_path}' does not exist.")
@@ -21,6 +25,8 @@ try:
         my_pdf_reader = PyPDF2.PdfReader(my_file)
         pages = len(my_pdf_reader.pages)
         print(f"The PDF has {pages} pages.")
+        if end_page:
+            pages=end_page
 
         full_text = ""
 
